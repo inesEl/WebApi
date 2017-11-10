@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{BC6E4B0D-E913-434B-B908-6B9DE0B68CC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorsClient", "CorsClient\CorsClient.csproj", "{A005F280-196E-491B-9401-69F1C576F1FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC6E4B0D-E913-434B-B908-6B9DE0B68CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6E4B0D-E913-434B-B908-6B9DE0B68CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6E4B0D-E913-434B-B908-6B9DE0B68CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6E4B0D-E913-434B-B908-6B9DE0B68CC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A005F280-196E-491B-9401-69F1C576F1FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A005F280-196E-491B-9401-69F1C576F1FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A005F280-196E-491B-9401-69F1C576F1FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A005F280-196E-491B-9401-69F1C576F1FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4013693-E872-46EB-97D4-031BF1C01B79}
+	EndGlobalSection
+EndGlobal
