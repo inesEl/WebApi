@@ -8,17 +8,6 @@
 
     <h3>Cors Request</h3>
 
-    <form id="userdata">
-        <input type="text" id="Name" placeholder="Name" />
-        <input type="password" id="Password" placeholder="Password" />
-        <input type="password" id="ConfirmPassword" placeholder="Confirm Password" />
-
-        <input type="button" value="Register" />
-        <input type="button" value="Login" />
-
-
-    </form>
-
     <button id="getPatients">Get Patients</button>
 
     <pre id="output">
@@ -31,6 +20,7 @@
         $(function () {
 
             var getPatients = function () {
+                var url = "http://localhost:54639/api/patients/";
                 $.get(url).always(showResponse);
                 return false;
             };
@@ -39,8 +29,9 @@
                 $("#output").text(JSON.stringify(object, null, 4));
             };
 
-            var url = "http://localhost:54639/api/patients/";
+           
             $("#getPatients").click(getPatients);
+            $("#register").click(register);
         });
     </script>
 </body>

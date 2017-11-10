@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http.Cors;
 using System.Web.Mvc;
 
 namespace WebApi.Controllers
 {
+    [EnableCors("*", "*", "Get")]
     public class HomeController : Controller
     {
         public ActionResult Index()

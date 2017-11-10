@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h3>Auth Request</h3>
+
+    <form id="userdata">
+        <input type="text" name="Username" placeholder="Email" />
+        <input type="password" name="Password"  placeholder="Password" />
+        <input type="password" name="ConfirmPassword" placeholder="Confirm Password" />
+
+        <input type="submit" id="register" value="Register" />
+        <input type="submit" id="login" value="Login" />
+
+    </form>
+
+    <button id="getPatients">Get Patients</button>
+
+    <pre id="output">
+
+    </pre>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script>
+       
+        $(function () {
+
+            var register = function () {
+                var url = "/api/Account/Register";
+
+                var data = $("#userdata").serialize();
+                $.post(url, data).always(showResponse);
+                return false;
+            };
+            var token = "";
+
+            var login = function () {
+                var url = "/token";
+
+                var data = $("#userdata").serialize() + "&grant_type=password";
+
+                $.post(url, data).success(saveToken).always(showResponse);
+                return false;
+            };
+
+            var saveToken = function (object) {
+                token = object.access_token;
+                return false;
+            };
+
+            var getPatients = function () {
+                var url = "/api/patients/";
+                $.ajax(url, {
+                    method: "Get",
+                    headers: getHeaders()
+                }).always(showResponse);
+                return false;
+            };
+
+            var getHeaders = function () {
+                if (token) {
+                    return { "Authorization": "Bearer " + token };
+                };
+                return false;
+            };
+
+            var showResponse = function (object) {
+                $("#output").text(JSON.stringify(object, null, 4));
+            };
+
+           
+            $("#getPatients").click(getPatients);
+            $("#register").click(register);
+            $("#login").click(login);
+        });
+    </script>
+</body>
+</html>

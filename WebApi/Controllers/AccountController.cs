@@ -16,6 +16,7 @@ using Microsoft.Owin.Security.OAuth;
 using WebApi.Models;
 using WebApi.Providers;
 using WebApi.Results;
+using System.Web.Http.Cors;
 
 namespace WebApi.Controllers
 {

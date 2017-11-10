@@ -8,6 +8,7 @@ using WebApi.Models;
 
 namespace WebApi.Controllers
 {
+    [Authorize]
     [EnableCors("*", "*", "Get")]
     public class PatientsController : ApiController
     {
